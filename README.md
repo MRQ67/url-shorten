@@ -27,7 +27,7 @@ Follow these steps to set up the project on your machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/MRQ67/url-shortener-cli.git
+   git clone https://github.com/MRQ67/url-shorten.git
    cd url-shortener-cli
    ```
 

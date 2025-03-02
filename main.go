@@ -14,7 +14,7 @@ import (
 	"github.com/atotto/clipboard"
 	"github.com/common-nighthawk/go-figure"
 	"github.com/fatih/color"
-	"github.com/skip2/go-qrcode"
+	"github.com/mdp/qrterminal"
 )
 
 // Define command-line flag variables
@@ -183,10 +183,13 @@ func displayHistory() {
 
 // generateQRCode creates a QR code for the given URL and saves it as qr.png
 func generateQRCode(url string) {
-	err := qrcode.WriteFile(url, qrcode.Medium, 256, "qr.png")
-	if err != nil {
-		color.Red("Error generating QR code: %v", err)
-	} else {
-		color.Green("QR code saved as qr.png")
+	config := qrterminal.Config{
+		Level:     qrterminal.L,
+		Writer:    os.Stdout,
+		BlackChar: qrterminal.BLACK,
+		WhiteChar: qrterminal.WHITE,
+		QuietZone: 1, // Smallest practical border
 	}
+	qrterminal.GenerateWithConfig(url, config)
+	color.Green("QR code displayed above")
 }
