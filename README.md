@@ -1,4 +1,3 @@
-
 # URL Shortener CLI
 
 A powerful and user-friendly command-line tool built in Go to shorten URLs using various services. It features a sleek interface with colored output, history tracking, QR code generation, and support for multiple shortening services.
@@ -89,7 +88,6 @@ Run the tool using `go run main.go` or the built executable (`./urlshort`). It s
 Enter URL to shorten: https://www.youtube.com/
 Shortening...
 Shortened URL: https://tinyurl.com/6gvvov (copied to clipboard)
-Shortened URL: https://tinyurl.com/6gvvov
 ```
 
 ## Configuration
